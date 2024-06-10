@@ -1,5 +1,7 @@
 package register;
 
+import register.INFO.Meta;
+
 public interface Register {
     /**
      * 注册服务
@@ -7,14 +9,14 @@ public interface Register {
      * @param service  服务名
      * @param implHost 实现ip
      */
-    void register(String service, String implHost);
+    void register(Meta meta);
 
     /**
      * 删除服务
      *
      * @param service 服务名
      */
-    void disRegister(String service);
+    void disRegister(Meta meta);
 
     /**
      * 获取服务
@@ -22,5 +24,5 @@ public interface Register {
      * @param service 服务名
      * @return 服务名指向的实现ip
      */
-    String getService(String service);
+    String getService(Meta meta);
 }

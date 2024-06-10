@@ -1,3 +1,4 @@
+import register.INFO.Config;
 import register.Register;
 import spi.SpiLoader;
 

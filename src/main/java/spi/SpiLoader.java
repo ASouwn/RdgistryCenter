@@ -36,9 +36,8 @@ public class SpiLoader {
      * 从配置从加载到所有类对象
      *
      * @param loadInterface
-     * @return
      */
-    public static Map<String, Class<?>> load(Class<?> loadInterface) {
+    public static void load(Class<?> loadInterface) {
         String scanDir = PRE_SERIALIZER_DIR + loadInterface.getName();
         List<URL> resources = ResourceUtil.getResources(scanDir);
         Map<String, Class<?>> keyClassMap = new HashMap<>();
@@ -60,7 +59,6 @@ public class SpiLoader {
             }
         }
         loadMap.put(loadInterface.getName(), keyClassMap);
-        return keyClassMap;
     }
 
     /**
