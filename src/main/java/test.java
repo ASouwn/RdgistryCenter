@@ -4,10 +4,10 @@ import register.Register;
 
 import java.util.concurrent.ExecutionException;
 
-public class main {
+public class test {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         Register register = RegisterFactory.getInstance("etcd");
-//        生产
+//        配置连接
         Meta meta = Meta.builder()
                 .serviceName("asouwn")
                 .serviceUrl("http://hello/asouwn")
@@ -18,8 +18,7 @@ public class main {
                 .registryAddr("http://127.0.0.1:2379")
                 .timeout(3000L).build();
         register.init(config);
-        register.register(meta);
-
+//        消费
+        System.out.println(register.getService(meta));
     }
-
 }

@@ -12,3 +12,7 @@
 3. 'RegisterFactory.getInstance("key")' 即可快速自定义的注册中心
 ## 支持修改目录
 在spi文件目录下，spiLoader类中，修改变量 PRE_SERIALIZER_DIR 即可修改读取路，也可以根据需要修改原码
+
+## 运行截图
+- 基于etcd的注册服务中心,并且存在心跳检测，此时这个服务依旧存在，可以另起一个模块，直接调用服务，并停止服务端后再试
+![img.png](public/img.png)

@@ -23,4 +23,16 @@ public class Meta {
      */
     private String serviceVision;
 
+    private String preFixDir;
+    /**
+     * 注册服务中心的key
+     * @return serviceName:serviceVision/serviceHost:servicePort
+     */
+    public String getKey(){
+        return String.format("%s/%s:%s", serviceName, serviceVision, serviceUrl);
+    }
+    public String getKeyDir(){
+        return String.format("/%s/%s", preFixDir, getKey());
+    }
+
 }
