@@ -18,6 +18,9 @@
 ![img.png](public/img.png)
 
 ## ToDo
-- 增加基于Vert.x的监听，来响应服务发现的请求，此时还只能在本地使用
+- 基于Vert.x实现localRegister功能完善，但到与etcd相同的功能
+- starter工具打包，满足spring下的开发需要
+- 增加基于Vert.x的代理，来响应服务发现的请求，此时还只能在本地使用，并不能满足分布式的需求
+- 增加web页面管理
 - 支持更多服务
 - 简化使用
